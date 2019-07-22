@@ -1,0 +1,22 @@
+//Created by Zhengzhong Sun
+//Email: zhengzhong.sun@dgene.com
+//Date: 2019.3.22
+
+#pragma once
+
+#include<opencv2\opencv.hpp>
+
+namespace DGene {
+
+	class GreenScreenRemoval
+	{
+	public:
+		// Green screen removal and replace the background with black color
+		// Input: frame is the image with green screen, 
+		//        min_green and max_green controal the range of green,
+		//        min_green(0-100, default=55), max_green(0-100, default=72)
+		// Return value: the result image after green screen removal
+		static cv::Mat GreenScreenMatting(cv::Mat frame, int min_greeen = 55, int max_green = 72);
+	};
+
+}
